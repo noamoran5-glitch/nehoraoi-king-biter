@@ -2,13 +2,13 @@ import os #Operating System - פונה למערכת ההפעלה של המחשב
 from dotenv import load_dotenv  #הספריה שהורדנו - של משתני הסביבה
 from google import genai #generative ai = בינה מלאכותית יוצרת
 import streamlit as st #ספריה של ממשקים GUI
-
+from Helper import *
 st.title("משחק אליאס ")
 
-load_dotenv() #טוענים את המשתנים
-API_KEY = os.getenv("API_KEY") #פונים לקובץ env - ומבקשים את המשתנה API_KEY
+#load_dotenv() #טוענים את המשתנים
+#API_KEY = os.getenv("API_KEY") #פונים לקובץ env - ומבקשים את המשתנה API_KEY
 #print(API_KEY)
-
+API_KEY = getAPIkey()
 #seesion -  הזמן שלנו כרגע באפליקציה - מהרגע שנכנסתי ועד שיצאתי אני בסשיין אחד
 
 def start(): #פעם ראשונה שנכנסנו
